@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pancakes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pancakes.each do |pancake| %>
+      <tr>
+        <td><img src="<%= pancake.image %>"></td>
+        <td><%= pancake.name %></td>
+        <td><%= pancake.description %></td>
+        <td><%= pancake.price %></td>
+        <td><%= pancake.stock %></td>
+        <td><%= link_to 'Show', pancake %></td>
+        <td><%= link_to 'Edit', edit_pancake_path(pancake) %></td>
+        <td><%= link_to 'Destroy', pancake, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pancake', new_pancake_path %>

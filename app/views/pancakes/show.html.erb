@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pancake.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pancake.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @pancake.price %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @pancake.stock %>
+</p>
+
+<p>
+  <img src="<%= @pancake.image %>">
+</p>
+
+<%= link_to 'Edit', edit_pancake_path(@pancake) %> |
+<%= link_to 'Back', pancakes_path %>

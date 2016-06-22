@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  resource :cart, only: [:show] do
+    put 'add/:pancake_id', to: 'carts#add', as: :add_to
+    put 'remove/:pancake_id', to: 'carts#remove', as: :remove_from
+  end
+
+  devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
+
   root 'pancakes#index'
 
   resources :pancakes

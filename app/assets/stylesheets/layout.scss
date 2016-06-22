@@ -1,15 +1,18 @@
 @font-face {
-  font-family: 'Gotham-Rounded';
-  src: url(gotham-rounded-medium.otf);
+  font-family: 'Iowan Old Style';
+  color: #4b6072;
 }
 // Body background
 body {
-  background-image: url(body_bg.png);
+  // background-color: #dfd1c0;
+  background-color: #f1e6d4;
+  // background-image: url(body_bg.png);
   background-position: center;
-  color: #fff;
+  // color: #fff;
+  color: #5a7876;
 }
 // Logo
-.title-area {
+.title-area{
   a { padding:0 !important }
   i {
     font-size: 30px;
@@ -18,7 +21,10 @@ body {
   }
 }
 // Topbar items
-.top-bar-section ul li { background: transparent }
+.top-bar-section ul li { 
+  // background: transparent;
+  background-color: #e3b8b2;
+}
 // Forms
 .form-container {
   padding: 3% 3%;

@@ -10,6 +10,8 @@ class PancakesController < ApplicationController
   # GET /pancakes/1
   # GET /pancakes/1.json
   def show
+    @pancake = Pancake.find(params[:id])
+    @cart_action = @pancake.cart_action current_user.try :id
   end
 
   # GET /pancakes/new

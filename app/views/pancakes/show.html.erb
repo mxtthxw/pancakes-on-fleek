@@ -24,5 +24,14 @@
   <img src="<%= @pancake.image %>">
 </p>
 
+<%if signed_in?%>
+  <%= link_to "", class: "button", data: {target: @cart_action, addUrl: add_to_cart_path(@pancake), removeUrl: remove_from_cart_path(@pancake)} do %>
+    <!-- <i class="fi-shopping-cart"></i> -->
+    <i class="fa fa-cutlery" aria-hidden="true"></i>
+    <span><%=@cart_action%></span> Plate
+  <%end%>
+<%end%>
+
+<br>
 <%= link_to 'Edit', edit_pancake_path(@pancake) %> |
 <%= link_to 'Back', pancakes_path %>

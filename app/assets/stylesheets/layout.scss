@@ -9,11 +9,21 @@ body {
   // background-image: url(body_bg.png);
   background-position: center;
   // color: #fff;
-  color: #5a7876;
+  // color: #5a7876;
 }
 // Logo
-.title-area{
-  a { padding:0 !important }
+.title-area {
+  list-style-type: none;
+  text-align: center;
+  // background-color: #5a7876;
+  background-color: #e3b8b2;
+  border-radius: 9px;
+  a { 
+    padding:0 !important;
+    text-decoration: none;
+    // color: #4b6072;
+    color: #a5b2ab;
+  }
   i {
     font-size: 30px;
     position: relative;
@@ -23,7 +33,7 @@ body {
 // Topbar items
 .top-bar-section ul li { 
   // background: transparent;
-  background-color: #e3b8b2;
+  background-color: #5a7876;
 }
 // Forms
 .form-container {
@@ -32,4 +42,12 @@ body {
     position: relative;
     top: -5px;
   }
+}
+
+.headline {
+  font-family: 'Sansita One';
+  font-size: 130px;
+  color: #a5b2ab;
+  text-shadow: -4px -4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff, 4px 4px 0 #fff;
+  display: inline-block;
 }

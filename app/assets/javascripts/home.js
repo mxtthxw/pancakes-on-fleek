@@ -19,7 +19,7 @@ $(document).ready(function(){
         alert("yay");
       },
       error: function () {
-        alert("boo");
+        alert("NO PANCAKES FOR YOU");
       }
     });
 
@@ -158,7 +158,7 @@ $(document).ready(function(){
 	      },
 
 	      error: function () {
-	        alert("boo");
+	        alert("NO PANCAKES FOR YOU");
 	      }
 
 			});

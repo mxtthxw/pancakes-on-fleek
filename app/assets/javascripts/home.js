@@ -15,10 +15,10 @@ $(document).ready(function(){
 				'grant_type': 'client_credentials',
 				'scope': 'delivery'
 			}),
-			success: function (response) {
+			success: function(response){
         alert("yay");
       },
-      error: function () {
+      error: function(){
         alert("NO PANCAKES FOR YOU");
       }
     });

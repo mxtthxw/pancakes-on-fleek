@@ -1,7 +1,10 @@
+# require 'plate'
+
 class CartsController < ApplicationController
   before_action :authenticate_user!
 
   def show
+    @plate = Plate.where(user_id: 1)
     cart_ids = $redis.smembers current_user_cart
     @cart_pancakes = Pancake.find(cart_ids)
   end

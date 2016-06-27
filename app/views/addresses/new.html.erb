@@ -1,0 +1,10 @@
+Enter Your Address:
+<%= form_for @address do |f| %>
+Address 1: <%= f.text_field :address %><br>
+Address 2: <%= f.text_field :address_2 %><br>
+City: <%= f.text_field :city %><br>
+State: <%= f.text_field :state %><br>
+Zip: <%= f.text_field :postal_code %><br>
+Country: <%= f.text_field :country %><br>
+<%= f.submit "Enter", class: "new-address", id: "new-address" %>
+<% end %>

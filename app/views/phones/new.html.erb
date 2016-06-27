@@ -1,0 +1,8 @@
+<div id="phone-tracking">
+  <h3>Please enter your phone number for pancake updates:</h3>
+  <%= form_for @phone do |f| %>
+      <%= f.telephone_field :number %>
+      <%= f.hidden_field :user_id, :value => @current_user.id %>
+    <%= f.submit "Enter", class: "track-pancakes", id: "track-pancakes" %>
+  <% end %>
+</div>

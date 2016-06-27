@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'addresses/new'
+
+  get 'addresses/create'
+
+  get 'addresses/destroy'
+
+  get 'addresses/show'
+
+  devise_for :admins
   resource :cart, only: [:show] do
     put 'add/:pancake_id', to: 'carts#add', as: :add_to
     put 'remove/:pancake_id', to: 'carts#remove', as: :remove_from
@@ -10,6 +19,13 @@ Rails.application.routes.draw do
   root 'pancakes#index'
 
   resources :pancakes
+
+  resources :users
+
+  resources :addresses
+
+  resources :phones, only: [:new, :create]
+  post 'phones/track' => "phones#track"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,10 +1,14 @@
+# require 'plate'
+
 class PancakesController < ApplicationController
   before_action :set_pancake, only: [:show, :edit, :update, :destroy]
 
   # GET /pancakes
   # GET /pancakes.json
   def index
+    current_user
     @pancakes = Pancake.all
+    # @plate = Plate.new(@current_user.id)
   end
 
   # GET /pancakes/1

@@ -19,8 +19,8 @@
               <%= link_to cart_path do %>
                 <!-- <i class="fi-shopping-cart"></i> -->
                 <i class="fa fa-cutlery" aria-hidden="true"></i>
-                My Plate
-                (<span class="cart-count"><%= current_user.cart_count %></span>)
+                My Plate(<span class="plate-count"></span>)
+                
               <% end %>
             </li>
             <li><%= link_to current_user.email, edit_user_registration_path %></li>

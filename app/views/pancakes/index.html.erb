@@ -8,7 +8,9 @@
       <th>Name</th>
       <th>Description</th>
       <th>Price</th>
-      <th>Stock</th>
+      <% if current_admin %>
+        <th>Stock</th>
+      <% end %>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,10 +22,15 @@
         <td><%= pancake.name %></td>
         <td><%= pancake.description %></td>
         <td>$<%= pancake.price %></td>
-        <td><%= pancake.stock %></td>
-        <td><%= link_to 'Show', pancake %></td>
-        <td><%= link_to 'Edit', edit_pancake_path(pancake) %></td>
-        <td><%= link_to 'Destroy', pancake, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_admin %>
+          <td><%= pancake.stock %></td>
+        <% end %>
+        <td><%= link_to 'Details', pancake %></td>
+        <td><button class="add-<%= pancake.name.downcase %>">Add to Plate</button>
+        <% if current_admin %>
+          <td><%= link_to 'Edit', edit_pancake_path(pancake) %></td>
+          <td><%= link_to 'Destroy', pancake, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

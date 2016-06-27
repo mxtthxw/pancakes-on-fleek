@@ -1,13 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Pancakes</h1>
+<div class="quotes">
+
+<h1 class="quotes our">Our Pancakes</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <!-- <th>Name</th>
       <th>Description</th>
-      <th>Price</th>
+      <th>Price</th> -->
       <% if current_admin %>
         <th>Stock</th>
       <% end %>
@@ -39,3 +41,5 @@
 <br>
 
 <%= link_to 'New Pancake', new_pancake_path %>
+
+</div>

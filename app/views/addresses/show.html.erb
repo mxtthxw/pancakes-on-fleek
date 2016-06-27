@@ -1,2 +1,38 @@
-<h1>Addresses#show</h1>
-<p>Find me in app/views/addresses/show.html.erb</p>
+<div class="address-card">
+	<span class="address1"><%= @address.address %></span><br>
+	<% if @address.address_2 %>
+		<span class="address2"><%= @address.address_2 %></span><br>
+	<% end %>
+	<span class="city"><%= @address.city %></span>, 
+	<span class="state"><%= @address.state %></span> 
+	<span class="zip"><%= @address.postal_code %></span><br>
+	<%#= a.country %>
+</div>
+
+<button class="send-pancakes">Send Pancakes To This Address</button><br><br>
+<%#= link_to "Send Pancakes To This Address",  %>
+
+<div class="quotes">
+	<div class="options"></div><br>
+	<ul>
+		<span class="quote1"></span><br>
+		<span class="price1"></span><br>
+		<span class="window1"></span><br>
+		<span class="button1"></span>
+		<hr>
+		<span class="quote2"></span><br>
+		<span class="price2"></span><br>
+		<span class="window2"></span><br>
+		<span class="button2"></span>
+		<hr>
+		<span class="quote3"></span><br>
+		<span class="price3"></span><br>
+		<span class="window3"></span><br>
+		<span class="button3"></span>
+		<hr>
+		<span class="quote4"></span><br>
+		<span class="price4"></span><br>
+		<span class="window4"></span><br>
+		<span class="button4"></span>
+	</ul>
+</div>

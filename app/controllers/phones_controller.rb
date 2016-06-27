@@ -9,7 +9,7 @@ class PhonesController < ApplicationController
 		current_user
 		@phone = Phone.new(phone_params)
 		if @phone.save
-			@phone.track_pancakes
+			@phone.scheduled
 			redirect_to user_path(@current_user)
 			# respond_to do |format|
 				# format.js

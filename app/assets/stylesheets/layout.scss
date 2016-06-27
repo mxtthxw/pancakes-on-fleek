@@ -1,3 +1,13 @@
+.right {
+  list-style-type: none;
+}
+
+.right a {
+  margin-left: 10px;
+  color: white;
+  text-decoration: none !important;
+}
+
 @font-face2 {
   font-family: 'Sansita One';
   color: #4b6072;
@@ -34,6 +44,7 @@ body {
 .top-bar-section ul li { 
   // background: transparent;
   background-color: #5a7876;
+  // float: left;
 }
 // Forms
 .form-container {

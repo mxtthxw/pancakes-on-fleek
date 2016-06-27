@@ -7,6 +7,7 @@ class AddressesController < ApplicationController
   	current_user
   	@address = Address.new(address_params)
   	if @address.save
+  		@address.users << current_user
   		redirect_to user_path(@current_user)
   	else
   		render 'new'
@@ -17,6 +18,7 @@ class AddressesController < ApplicationController
   end
 
   def show
+    @address = Address.find(params[:id])
   end
 
   private

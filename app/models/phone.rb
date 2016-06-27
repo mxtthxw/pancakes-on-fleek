@@ -8,7 +8,7 @@ class Phone < ActiveRecord::Base
 
 	def scheduled
   	twilio_client.messages.create(
-	    to: number,
+	    to: '+1' + number,
 	    from: '+16307556238',
 	    body: "Your pancakes are being prepared."
 	  )
@@ -16,7 +16,7 @@ class Phone < ActiveRecord::Base
 
 	def en_route
   	twilio_client.messages.create(
-	    to: number,
+	    to: '+1' + number,
 	    from: '+16307556238',
 	    body: "Your pancakes are on the way!"
 	  )
@@ -24,7 +24,7 @@ class Phone < ActiveRecord::Base
 
 	def arrive
   	twilio_client.messages.create(
-	    to: number,
+	    to: '+1' + number,
 	    from: '+16307556238',
 	    body: "Your pancakes have arrived."
 	  )

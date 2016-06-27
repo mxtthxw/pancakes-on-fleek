@@ -1,3 +1,32 @@
 <%= @user.email %><br>
+<%= link_to "Edit Profile", edit_user_registration_path %><br>
+Phone Number:<br>
+<% if @phones %>
+	<%# @phones.each do |p| %>
+		<%#= p.number[2..-1] %>
+		<% if @phones[0].number.length > 10 %>
+			<%= @phones[0].number[2..-1] %><br>
+		<% else %>
+			<%= @phones[0].number %><br>
+		<% end %>
+	<%# end %>
+<% end %>
 <%= link_to "Add Phone Number", new_phone_path %><br>
+Addresses:<br>
+<% if @user.addresses %>
+	<% @user.addresses.each do |a| %>
+		<%= link_to address_path(a) do %>
+			<div class="address-card highlight">
+				<%= a.address %><br>
+				<% if a.address_2 %>
+					<%= a.address_2 %><br>
+				<% end %>
+				<%= a.city %>, 
+				<%= a.state %> 
+				<%= a.postal_code %><br>
+				<%#= a.country %>
+			</div>
+		<% end %>
+	<% end %>
+<% end %>
 <%= link_to "Add Address", new_address_path %>

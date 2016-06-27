@@ -22,7 +22,9 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :addresses
+  resources :addresses do
+    resources :user_addresses
+  end
 
   resources :phones, only: [:new, :create]
   post 'phones/track' => "phones#track"

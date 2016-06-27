@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 
 	has_one :phone
 	has_many :addresses, through: :user_addresses
+	has_many :user_addresses
 
 	def cart_count
   	$redis.scard "cart#{id}"

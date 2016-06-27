@@ -60,7 +60,7 @@ callback();
 };
 
 $(".add-original").on("click", function(){
-	alert("hi");
+	// alert("hi");
 })
 
 var pancakeCount = function(callback) {
@@ -70,7 +70,7 @@ var pancakeCount = function(callback) {
 }
 
 var cartDisplay = function() {
-	alert("hi");
+	// alert("hi");
 	// $(".plate-count").html(cartCount);
 }
 
